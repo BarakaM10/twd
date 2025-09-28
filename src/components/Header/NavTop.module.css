@@ -1,0 +1,271 @@
+.header {
+  height: 65px;
+  justify-content: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100vw;
+  background-color: #228be6;
+}
+
+.headerContainer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 3rem;
+  
+}
+.headerContainer a{
+  text-decoration: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: clamp(8px, 2vw, 16px);
+  padding-right: clamp(8px, 2vw, 16px);
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-white), var(--mantine-color-white));
+  font-weight: 500;
+  font-size: clamp(12px, 1.5vw, 14px);
+  transition: all 0.2s ease;
+
+  @media (max-width: '48em') {
+    height: 42px;
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.subLink {
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #228be6;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.electionsSubLink {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #228be6;
+    transform: translateX(4px);
+    color: #ffffff;
+  }
+}
+
+.dropdownFooter {
+  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
+  margin: -16px;
+  margin-top: 12px;
+  padding: 16px 32px;
+  padding-bottom: 24px;
+  border-top: 1px solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: clamp(5px, 2cqw, 16px);
+  max-width: 100%;
+  min-width: 0; 
+}
+
+.logoImage {
+  flex-shrink: 0;
+  width: clamp(30px, 8vw, 75px);
+  height: auto;
+
+}
+
+.logoText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: clamp(16px, 2cqw, 32px);
+  font-weight: 700;
+  color: white;
+  min-width: 0; 
+  
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: clamp(0px, 1vw, 8px);
+  flex-shrink: 0;
+}
+
+.highlight {
+  position: relative;
+  background-color: var(--mantine-color-blue-light);
+  border-radius: 4px;
+  padding: 4px 12px;
+}
+
+.navButton {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  border-color: white;
+  font-size: clamp(12px, 1.5vw, 14px);
+  padding: 0.5rem 1rem;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.active {
+  color: #228be6;
+  background: #ffffff;
+  font-weight: 700;
+}
+
+.active:hover {
+  color: #228be6;
+  background: #ffffff;
+  font-weight: 700;
+}
+
+/* Responsive navigation adjustments */
+@media (max-width: 900px) {
+  .header {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .headerContainer {
+    max-width: 100%;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .headerContainer {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 350px) {
+  .header {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  
+  .logoText {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  color: white;
+  flex-shrink: 0;
+}
+
+.hamburger > div {
+  background-color: white;
+}
+
+/* Mobile drawer styles */
+.drawerContent {
+  background-color: #228be6;
+  color: white;
+}
+
+.drawerLink {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.drawerLink:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.drawerLinkActive {
+  background-color: white;
+  color: #228be6;
+  font-weight: 700;
+}
+
+.drawerLinkActive:hover {
+  background-color: white;
+  color: #228be6;
+}
+
+.mobileSubMenu {
+  margin-left: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  padding-left: 12px;
+}
+
+.drawerSubLink {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  transition: all 0.2s ease;
+}
+
+.drawerSubLink:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
+}
+
+.drawerButton {
+  background-color: white;
+  color: #228be6;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.drawerButton:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+}

@@ -1,0 +1,121 @@
+.contact {
+  padding: calc(var(--mantine-spacing-xl) * 2) 0;
+  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: var(--mantine-spacing-xl);
+}
+
+.mainTitle  span {
+  color:#3b82f6;
+}
+.contactInfo {
+  margin-bottom: var(--mantine-spacing-xl);
+  padding-top: 1rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--mantine-spacing-sm);
+  margin-bottom: var(--mantine-spacing-sm);
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-gray-3));
+}
+
+.icon {
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.formSection {
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-6));
+  padding: var(--mantine-spacing-lg);
+  border-radius: var(--mantine-radius-md);
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.formTitle {
+  font-size: var(--mantine-font-size-lg);
+  font-weight: 600;
+  color: light-dark(var(--mantine-color-gray-8), var(--mantine-color-gray-1));
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mapContainer {
+  height: 100%;
+  min-height: 400px;
+  border-radius: var(--mantine-radius-md);
+  overflow: hidden;
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  border: none;
+  min-height: 400px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.inner {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 900px) {
+  .infoRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+  .inner {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: var(--mantine-spacing-xl) 0;
+  }
+  
+  .mainTitle {
+    font-size: var(--mantine-font-size-xl);
+    margin-bottom: var(--mantine-spacing-lg);
+  }
+  
+  .formSection {
+    padding: var(--mantine-spacing-md);
+  }
+  
+  .mapContainer {
+    margin-top: var(--mantine-spacing-lg);
+    min-height: 300px;
+  }
+  
+  .map {
+    min-height: 300px;
+  }
+}
