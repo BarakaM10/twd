@@ -342,11 +342,11 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   }
 
   .formContainer {
-    padding: 1.5rem;
+    padding: 0.5rem;
   }
 
   .formActions {
