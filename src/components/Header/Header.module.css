@@ -1,0 +1,286 @@
+.header {
+  background-color: #1e5fb3;
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+}
+
+.header::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10px;
+  top: -1;
+  left: 0;
+  background: url('/bg-header-top.png') center center repeat-x;
+  z-index: 1;
+}
+
+.top p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerContainer {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 40px;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* @media (max-height:1024px) {
+  .headerContainer{
+  height: 300px;
+  }
+} */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.logoImage {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.logoImageIn {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.logoText {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 0;
+  flex-shrink: 0;
+  flex: 0.8; 
+  justify-content: space-evenly; 
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+  font-size: 20px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  transition: all 0.2s ease;
+  position: relative;
+  white-space: nowrap;
+  flex: 1;
+  justify-content: center; 
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+  border-width: 0 0 5px 0; 
+  border-style: solid; 
+  border-color: transparent; 
+  /* border-image: url('/bg-header-bottom.png') 0 0 100% 0 repeat; */
+}
+.navButton {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-left: 20px;
+}
+
+.navButton:hover {
+  background-color: white;
+  color: #1e5fb3;
+  transform: translateY(-2px);
+}
+
+/* Mobile styles */
+.hamburger {
+  color: white;
+  flex-shrink: 0;
+}
+
+.hamburger > div {
+  background-color: white;
+}
+
+.drawerContent {
+  background-color: #1e5fb3;
+  color: white;
+}
+
+.drawerLink {
+  display: block;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  transition: all 0.2s ease;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.drawerLink:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.drawerLinkActive {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.drawerButton {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.drawerButton:hover {
+  background-color: white;
+  color: #1e5fb3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .logoText {
+    font-size: 18px;
+  }
+  
+  .link {
+    padding: 0 8px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .headerContainer {
+    padding: 0 20px;
+  }
+  
+  .top {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+  
+  .logoText {
+    font-size: 16px;
+  }
+  
+  .logo {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerContainer {
+    height: 70px;
+    padding: 0 16px;
+  }
+  
+  .logoText {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+  }
+  
+  .logoImage {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .logo {
+    gap: 6px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    padding: 0 12px;
+    height: 80px;
+  }
+  
+  .top {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  
+  .logoText {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+  
+  .logoImage {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .logo {
+    gap: 4px;
+    margin-right: 2px;
+  }
+}
+
+@media (max-width: 360px) {
+  .headerContainer {
+    padding: 0 8px;
+  }
+  
+  .logoText {
+    font-size: 11px;
+    letter-spacing: 0.1px;
+  }
+  
+  .logoImage {
+    width: 40px;
+    height: 40px;
+  }
+}

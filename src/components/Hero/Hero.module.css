@@ -1,266 +1,155 @@
-.heroContainer {
+.hero {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 100vh;
   overflow: hidden;
-  background-color: black;
-  min-height: 320px;
-  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }
 
-@media (min-width: 640px) {
-  .heroContainer {
-    height: 75vh;
-  }
+@media (max-width:700px) {
+.hero{
+  height: 70vh;
 }
-
-@media (min-width: 1024px) {
-  .heroContainer {
-    height: 85vh;
-  }
-}
-
-@media (max-width: 640px) {
-  .heroContainer {
-    height: 60vh;
-    min-height: 200px;
-    max-height: 70vh;
-  }
-}
-
-.backgroundContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .slideContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transition: opacity 1600ms ease-in-out;
-}
-
-.slideContainer.active {
-  opacity: 1;
-}
-
-.slideContainer.inactive {
-  opacity: 0;
-}
-
-.slideImage {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  overflow: hidden;
+  z-index: 2;
 }
 
-.slideOverlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent, rgba(0, 0, 0, 0.2));
-}
-
-.contentWrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 20;
-}
-
-.maxWidthContainer {
-  max-width: 512px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 640px) {
-  .maxWidthContainer {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 768px) {
-  .maxWidthContainer {
-    max-width: 896px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .maxWidthContainer {
-    max-width: 1280px;
-  }
-}
-
-.contentCard {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0.75rem;
-  color: white;
-  width: 100%;
-  height: 20%;
+.slideTrack {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 100%;
+  transition: transform 1s ease-in-out;
 }
 
-@media (min-width: 768px) {
-  .contentCard {
-    padding: 2rem;
-  }
-}
-
-.contentFlex {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-@media (min-width: 640px) {
-  .contentFlex {
-    gap: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .contentFlex {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-}
-
-.mainContent {
-  flex: 1 1 0%;
-}
-
-@media (min-width: 1024px) {
-  .mainContent {
-    flex-grow: 5;
-  }
-}
-
-.categoryBadgeWrapper {
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  justify-content: center;
+  z-index: 2;
+  overflow: hidden;
 }
 
-@media (min-width: 640px) {
-  .categoryBadgeWrapper {
-    margin-bottom: 0.75rem;
+.slideBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: zoomSlide 15s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  font-family: Arial;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.subheading {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 300;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  line-height: 1.4;
+}
+
+@keyframes zoomSlide {
+  0% { transform: scale(1.5); }   
+  50% { transform: scale(1); }  
+  100% { transform: scale(1.5); }   
+}
+
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  z-index: 3;
+  transition: background 0.3s ease;
+}
+
+.arrow:hover {
+  color:#1e5fb3;
+}
+
+.left {
+  left: 20px;
+}
+
+.right {
+  right: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heading {
+    font-size: clamp(2rem, 8vw, 3rem);
   }
-}
 
-.categoryBadge {
-  padding: 0.125rem 0.5rem;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-@media (min-width: 640px) {
-  .categoryBadge {
-    padding: 0.25rem 0.75rem;
-    font-size: 0.875rem;
+  .subheading {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    margin-bottom: 1.5rem;
   }
-}
 
-.title {
-  font-size: 1.125rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
-}
-
-@media (min-width: 640px) {
-  .title {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .title {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .title {
-    font-size: 2.25rem;
-  }
-}
-
-.description {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
-}
-
-@media (min-width: 640px) {
-  .description {
-    font-size: 0.875rem;
-    margin-bottom: 1.25rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .description {
+  .cta {
+    padding: 12px 30px;
     font-size: 1rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .description {
-    font-size: 1.25rem;
+@media (max-width: 480px) {
+  .heading {
+    margin-bottom: 0.8rem;
   }
-}
 
+  .subheading {
+    margin-bottom: 1.2rem;
+  }
 
-.viewGalleryBtn {
-  padding: 0.25rem 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 0.5rem;
-  transition: background 0.3s;
-  font-size: 0.75rem;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-}
-
-.viewGalleryBtn:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.mobileCounter {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  z-index: 30;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-  border-radius: 9999px;
-  padding: 0.125rem 0.5rem;
-  color: white;
-  font-size: 0.75rem;
-}
-
-@media (min-width: 640px) {
-  .mobileCounter {
-    display: none;
+  .arrow {
+    font-size: 1.5rem;
+    padding: 8px 12px;
   }
 }

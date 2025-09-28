@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   esomelo_school_website:
-    container_name: esomelo_school_website_2
+    container_name: white_dove_demo
     image: node:24.0.0
     command: bash -c "yarn install && yarn build && yarn start"
     volumes:

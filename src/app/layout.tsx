@@ -6,7 +6,7 @@ import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/c
 
 
 export const metadata: Metadata = {
-  title: "Esomelo Primary School",
+  title: "The White Doves Kindergarten",
   description: "Website maintained by Bodastage Solution",
 };
 

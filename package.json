@@ -1,12 +1,12 @@
 {
-  "name": "school-website",
+  "name": "esomelo-website-template-whitedove",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint"
   },
   "dependencies": {
     "@lordicon/react": "^1.11.0",
@@ -29,6 +29,7 @@
     "@tiptap/react": "^2.23.0",
     "@tiptap/starter-kit": "^2.23.0",
     "dayjs": "^1.11.13",
+    "dependencies": "^0.0.1",
     "embla-carousel": "8.5.2",
     "embla-carousel-react": "8.5.2",
     "lottie-react": "^2.4.1",
