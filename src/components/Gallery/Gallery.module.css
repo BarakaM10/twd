@@ -62,7 +62,7 @@
   border: 2px solid transparent;
   background: rgba(255, 255, 255, 0.9);
   color: #475569;
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Comic Neue";
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
@@ -209,7 +209,7 @@
 }
 
 .imageTitle {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Comic Neue";
   font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 0.3rem;
@@ -223,7 +223,7 @@
 }
 
 .imageCategory {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Comic Neue";
   font-size: 0.8rem;
   opacity: 0.9;
   display: flex;
@@ -247,7 +247,7 @@
   background: rgba(255, 255, 255, 0.9);
   color: #475569;
   border-radius: 12px;
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Comic Neue";
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -278,7 +278,7 @@
 }
 
 .paginationInfo {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Comic Neue";
   color: #475569;
   font-size: 0.95rem;
   font-weight: 500;
@@ -306,7 +306,7 @@
 }
 
 .loadingText {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Comic Neue";
   color: #94a3b8;
   font-size: 1rem;
 }
@@ -331,7 +331,7 @@
 }
 
 .emptyTitle {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Comic Neue";
   font-size: 1.5rem;
   font-weight: 700;
   color: #475569;
@@ -339,7 +339,7 @@
 }
 
 .emptyDescription {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Comic Neue";
   color: #64748b;
   font-size: 1rem;
 }
@@ -409,14 +409,14 @@
 }
 
 .modalTitle {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Comic Neue";
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .modalCategory {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Comic Neue";
   font-size: 1rem;
   opacity: 0.9;
   display: flex;
