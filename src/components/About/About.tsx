@@ -251,7 +251,7 @@ export default function AboutSection() {
               </div>
             ))}
           </div>
-          <div className={styles.button}>View More</div>
+          <a href="/gallery"><div className={styles.button}>View More</div></a>
         </section>
       </div>
     </section>

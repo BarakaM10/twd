@@ -34,12 +34,6 @@
   position: relative;
 }
 
-/* @media (max-height:1024px) {
-  .headerContainer{
-  height: 300px;
-  }
-} */
-
 .logo {
   display: flex;
   align-items: center;
@@ -74,7 +68,7 @@
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Neue";
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -98,7 +92,7 @@
   color: white;
   font-weight: 200;
   font-size: 20px;
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Comic Neue";
   transition: all 0.2s ease;
   position: relative;
   white-space: nowrap;
@@ -116,7 +110,6 @@
   border-width: 0 0 5px 0; 
   border-style: solid; 
   border-color: transparent; 
-  /* border-image: url('/bg-header-bottom.png') 0 0 100% 0 repeat; */
 }
 .navButton {
   background-color: transparent;
@@ -212,7 +205,7 @@
   }
   
   .logoText {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .logo {
@@ -227,13 +220,13 @@
   }
   
   .logoText {
-    font-size: 14px;
-    letter-spacing: 0.3px;
+    font-size: 20px;
+    letter-spacing: 1px;
   }
   
   .logoImage {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
   }
   
   .logo {
@@ -254,13 +247,13 @@
   }
   
   .logoText {
-    font-size: 14px;
+    font-size: 17.5px;
     letter-spacing: 0.2px;
   }
   
   .logoImage {
-    width: 55px;
-    height: 55px;
+    width: 62px;
+    height: 62px;
   }
   
   .logo {

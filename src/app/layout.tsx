@@ -20,6 +20,7 @@ export default function RootLayout({
 
       <head>
         <ColorSchemeScript />
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet" />
       </head>
       <body>
         <MantineProvider>{children}</MantineProvider>
