@@ -129,6 +129,7 @@ export default function ProgramsSection() {
                 </div>
                 
                 <h3 className={styles.ageTitle}>{group.title}</h3>
+                <p className={styles.ageDescription}>{group.description}</p>
                 
                 <ul className={styles.highlights}>
                   {group.highlights.map((highlight, i) => (
@@ -205,6 +206,27 @@ export default function ProgramsSection() {
           </div>
         </section>
 
+        {/* Key Features
+        <section className={styles.featuresSection}>
+          <h2 className={styles.sectionTitle}>Why Choose Our Programs?</h2>
+          
+          <div className={styles.features}>
+            {features.map((feature, index) => (
+              <div 
+                key={index} 
+                className={styles.feature}
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <div className={styles.featureIcon}>
+                  {feature.icon}
+                </div>
+                <h3 className={styles.featureTitle}>{feature.title}</h3>
+                <p className={styles.featureDescription}>{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </section> */}
+
         {/* Call to Action */}
         <section className={styles.ctaSection}>
           <div className={styles.ctaContent}>
@@ -213,10 +235,8 @@ export default function ProgramsSection() {
               Join our loving community where every child is valued, nurtured, and encouraged to reach their full potential.
             </p>
             <div className={styles.ctaButtons}>
-              <a href="/admission"><button className={styles.primaryButton}>Enroll Now</button></a>
-              <a href="https://wa.me/256123456789?text=Hello, I would like to schedule a visit" target="_blank" rel="noopener noreferrer">
-                <button className={styles.secondaryButton}>Schedule a Visit</button>
-              </a>
+              <button className={styles.primaryButton}>Enroll Now</button>
+              <button className={styles.secondaryButton}>Schedule a Visit</button>
             </div>
           </div>
         </section>

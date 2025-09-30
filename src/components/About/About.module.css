@@ -96,12 +96,6 @@
   transition: all 0.3s ease;
 }
 
-@media (max-width:900px) {
-  .mid{
-    font-weight:700;
-  }
-}
-
 .mid1:hover, .mid2:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -133,14 +127,14 @@
 }
 
 .mid {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.1rem;
   margin: 0.25rem 0;
   line-height: 1.4;
 }
 
 .bottom {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
   margin-top: 1rem;
 }
@@ -398,19 +392,6 @@
   .testimonial {
     grid-template-columns: 1.2fr 1.4fr;
     gap: 3rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .mid1, .mid2,
-  .mid,
-  .bottom,
-  .subtitle,
-  .vmmCard p,
-  .detail,
-  .testimonialText {
-    font-weight: 700 !important;
-    font-size: 20px;
   }
 }
 
@@ -704,11 +685,7 @@
   color: #ffffff;
   cursor: pointer;
   border: 2px solid transparent;
-  margin-top: 10px;
-}
-
-.photosSection a{
-  text-decoration: none;
+  margin-top: 15px;
 }
 
 .button:hover{

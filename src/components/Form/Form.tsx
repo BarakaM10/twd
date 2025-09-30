@@ -134,7 +134,7 @@ const Form: React.FC = () => {
         <div className={styles.formContent}>
           <div className={styles.formTitle}>
             <div className={styles.formIcon}><GraduationCap size={24} /></div>
-           Application Form
+            Student Admission Application
           </div>
           <p className={styles.formSubtitle}>Please fill out all required fields to complete your application</p>
 

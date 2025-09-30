@@ -206,14 +206,6 @@
   font-family: inherit;
 }
 
-@media (max-width:900px) {
-  .formInput,
-  .formSelect,
-  .formLabel{
-    font-weight: 600;
-  }
-}
-
 .formSelect:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
@@ -350,11 +342,11 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
-  padding: 2rem 1rem;
+  padding: 3rem 0;
   }
 
   .formContainer {
-    padding: 0.5rem;
+    padding: 1rem ;
   }
 
   .formActions {
@@ -368,6 +360,10 @@
   .formGrid2,
   .formGrid3 {
     grid-template-columns: 1fr;
+  }
+
+  .formIcon{
+    display: none;
   }
 }
 
@@ -385,9 +381,6 @@
     height: 2rem;
   }
 
-  .formContainer {
-    padding: 1rem;
-  }
 
   .formGrid {
     gap: 1rem;
