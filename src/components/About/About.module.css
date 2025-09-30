@@ -692,6 +692,10 @@
   transform: scale(1.01);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
+
+.photosSection a {
+  text-decoration: none;
+}
 /* Responsiveness*/
 
 /* Mobile First Adjustments */

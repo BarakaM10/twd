@@ -235,8 +235,17 @@ export default function ProgramsSection() {
               Join our loving community where every child is valued, nurtured, and encouraged to reach their full potential.
             </p>
             <div className={styles.ctaButtons}>
-              <button className={styles.primaryButton}>Enroll Now</button>
-              <button className={styles.secondaryButton}>Schedule a Visit</button>
+              <a href="/admission"><button className={styles.primaryButton}>Enroll Now</button></a>
+              <button 
+                className={styles.secondaryButton}
+                onClick={() => {
+                  const phoneNumber = '256776454118';
+                  const message = encodeURIComponent('Hello! I would like to schedule a visit to The White Doves Kindergarten. Please let me know the available times.');
+                  window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+                }}
+              >
+                Schedule a Visit
+              </button>
             </div>
           </div>
         </section>
